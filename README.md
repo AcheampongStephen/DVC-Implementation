@@ -42,4 +42,9 @@ dvc add data_given/winequality.csv
 i. git add .
 11. git commit -m "first commit"
 ```
- 
+10. Create a GitHub repository to push your flies and codes
+```
+i. git remote add origin https://github.com/AcheampongStephen/DVC-Implementation.git
+ii. git branch -M main
+iii. git push origin main
+```
