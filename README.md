@@ -79,4 +79,16 @@ split data
     - import yaml
     - argparse
 ```
+13. Create a 'src/load_data.py' in src directory to get the data.
+```
+- src/load_data.py: Read the datafrom the source and save it in the data/rw for further processing
+    - import os
+    - from get_data import read_params, get_data
+    - import argparse
+```
+14. Documents the stages in dvc.yaml file the run it.
+```
+dvc repro
+```
+ 
 
