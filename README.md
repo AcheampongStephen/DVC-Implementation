@@ -23,3 +23,23 @@ ii. In template.py, document the the packages, files and directories that will u
 iii. python template.py
 ```
 5. Download the dataset into data_given directory. Link: https://bit.ly/3TmpoPC
+
+6. Initiate GIT
+```
+git init
+```
+7. Initiate DVC
+```
+i. pip install dvc
+ii. dvc init
+```
+8. Track the data using DVC
+```
+dvc add data_given/winequality.csv
+```
+9. Add and commit the files
+```
+i. git add .
+11. git commit -m "first commit"
+```
+ 
