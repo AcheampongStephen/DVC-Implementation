@@ -48,3 +48,35 @@ i. git remote add origin https://github.com/AcheampongStephen/DVC-Implementation
 ii. git branch -M main
 iii. git push origin main
 ```
+11. Open params.yaml and document the stages of your project.
+```
+- base
+    - project name
+    - random state
+    - target column
+- data source
+    - data source location
+- loading the data
+    - raw data localtion
+split data
+    - training path of the data
+    - testing path of the data
+    - size to split
+- estimators
+    - algorithm to be used
+        -parameters of the algorithm
+            - alpha value
+            - l1_ratio value
+
+- model directory : Path of the saved model
+```
+
+12. Create a 'src/get_data.py' in src directory to get the data.
+```
+- src/get_data.py: Read the params, process it, and return dataframe
+    - pip install pandas
+    - import os
+    - import yaml
+    - argparse
+```
+
