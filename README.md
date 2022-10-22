@@ -151,10 +151,13 @@ envlist = py37
 skipsdist = True
 
 [testenv]
+
 deps = -rrequirements.txt
 commands = pytest -v
 
-on your cmd: run tox
+on your cmd run to build your virtual env together with the packages: tox 
+
+tox -r : rebuilding your virtual environment
 ```
 5. create setup.py to find and install all your packages.
 ```
@@ -172,6 +175,11 @@ setup(
 - pip install -e .
 - pip freeze
 ```
+6. MAke sure the range of each feature/columns has been determined. Under notebook directory, pip install jupyterlab.
+```
+- pip install jupyter lab
+- jupyter-lab notebooks/
+```
+7. Paste the custom error into text_config.py to test the range
 
- 
-
+## PEP 8 GUIDELINES USING FLAKE
