@@ -157,7 +157,21 @@ commands = pytest -v
 on your cmd: run tox
 ```
 5. create setup.py to find and install all your packages.
+```
+from setuptools import setup, find_packages
 
+setup(
+    name = "src",
+    version = "0.0.1",
+    description = "it's a wine quality packages",
+    author = "Stephen Acheampong",
+    packages = find_packages(),
+    license = "MIT"
+)
+
+- pip install -e .
+- pip freeze
+```
 
  
 
