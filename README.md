@@ -182,4 +182,9 @@ setup(
 ```
 7. Paste the custom error into text_config.py to test the range
 
+
 ## PEP 8 GUIDELINES USING FLAKE
+1. pip install flake
+2. In tox.ini, document the processes under commands.
+3. tox -r
+3. run tox
