@@ -108,12 +108,55 @@ dvc repro
 
 22. Update params.yaml to incorporate the paths of the reports.
 
-23. Track the updates and stages using dvc
+23. Track the updates and update stages using dvc
 ```
 dvc repro
 ```
+24.
+```
+dvc metrics show
+dvc metrics diff : differences between the metrics
+```
 
 
+
+********************************************************************
+
+## TESTING
+1. install pytest in requirements.txt
+2. tox in requirements.txt
+```
+- pytest
+- tox : create a virtual environment for your testing purposes
+pip install -r requirements.txt
+
+* push it to github
+```
+3. create tox.ini to initiate the file to document the desired environment for the testing
+4. create a test directory to document your tests. Within the directory, create __init__.py, conftest.py, and test_config.py to test the configuration.
+````
+for example Inside test_config.py,
+def tes_generic():
+    a = 2
+    b = 2
+    assert a == b
+
+    run: pytest -v
+    The result will restun successful
+```
+4. Inside tox, document the virtual environment and run it.
+```
+[tox]
+envlist = py37
+skipsdist = True
+
+[testenv]
+deps = -rrequirements.txt
+commands = pytest -v
+
+on your cmd: run tox
+```
+5. create setup.py to find and install all your packages.
 
 
  
