@@ -188,3 +188,26 @@ setup(
 2. In tox.ini, document the processes under commands.
 3. tox -r
 3. run tox
+
+
+    ### PREDICTION
+
+1. create a directory called prediction_service. Inside the directory, create a directory called model.
+
+2. In the root directory, create:
+ - webapp directory
+ - app.py
+
+3. Inside the prediction directory, create the following:
+    - __init__.py
+    - prediction.py
+
+4. In the webapp directory, create the following files and folders
+    - create 'static folder'
+    - inside static folder, create 'css folder'
+    - inside static folder, create 'script folder'
+    - In css folder, create main.css file
+    - In script folder,  create index.js
+    - in the webapp directory, create a 'template' folder
+    - inside template folder, create index.html
+    - inside template folder, create base.html
