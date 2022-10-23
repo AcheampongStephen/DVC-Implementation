@@ -240,3 +240,18 @@ setup(
 1. Create a new app on heroku
     - generate : Heroku app name and Token
 2. Inside the root directory of the project, create a procfile.
+
+#### MODIFYING THE MODEL
+    - APP.PY
+        - romve params_path
+        - remove all functions except @app.route<def>
+        - import: from prediction_service import prediction
+        - modify the neccessay lines of codes
+
+    - PREDICTION_SERVICE/PREDICTION.PY
+        - import libraries 
+        - move the removed functions and paste it
+        - write down the functions
+        - copy schema_in.json in notebooks to prediction_service and place underscore(_) in the column names
+
+# MLFLOW + DVC
