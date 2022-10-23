@@ -227,3 +227,16 @@ setup(
 3. Define the 'webapp_model_dir' path in params.yaml
 
 ![](POSTMAN.png)
+
+
+## WORKFLOW WITH GITHUB ACTIONS
+1. Create '.github' directory and inside the directory, create:
+    - 'workflows' directory
+        - inside the workflows directory, create:
+            -ci-cd.yaml file
+            paste the ci-cd pipelines
+
+## DEPLOYMENT
+1. Create a new app on heroku
+    - generate : Heroku app name and Token
+2. Inside the root directory of the project, create a procfile.
