@@ -74,32 +74,39 @@ split data
 12. Create a 'src/get_data.py' in src directory to get the data.
 ```
 - src/get_data.py: Read the params, process it, and return dataframe
-    - pip install pandas
-    - import os
-    - import yaml
-    - argparse
+- pip install pandas
+- import os
+- import yaml
+- argparse
 ```
+
 13. Create a 'src/load_data.py' in src directory to get the data.
 ```
 - src/load_data.py: Read the datafrom the source and save it in the data/raw for further processing
-    - import os
-    - from get_data import read_params, get_data
-    - import argparse
+ - import os
+ - from get_data import read_params, get_data
+- import argparse
 ```
+
 14. Documents the stages in dvc.yaml file then run it.
 ```
 dvc repro
 ```
+
 15. Create 'src/split_data' to split the loaded dataset from 'src/load_data'.
+
 16. Document the splitting stages in dvc.yaml and then run it
 ```
 dvc repro
 ```
+
 17. Create 'src/train_and_evaluate.py' to train and evaluate the model.
+
 18. Document the stages in dvc.yaml and run it
 ```
 dvc repro
 ```
+
 19. Create a report directory to save all your metrics and params. Within the directory, create params.json and scores.json to record all the metrics and parameters of the model.
 
 20. Update the dvc.yaml file by documenting the stages for the report under train_and_evaluate params section
@@ -112,29 +119,29 @@ dvc repro
 ```
 dvc repro
 ```
+
 24.
 ```
 dvc metrics show
 dvc metrics diff : differences between the metrics
 ```
 
-
-
-********************************************************************
-
 ## TESTING
 1. install pytest in requirements.txt
+
 2. tox in requirements.txt
 ```
 - pytest
 - tox : create a virtual environment for your testing purposes
 pip install -r requirements.txt
-
-* push it to github
+-push it to github
 ```
+
 3. create tox.ini to initiate the file to document the desired environment for the testing
+
+
 4. create a test directory to document your tests. Within the directory, create __init__.py, conftest.py, and test_config.py to test the configuration.
-````
+```
 for example Inside test_config.py,
 def tes_generic():
     a = 2
@@ -144,6 +151,7 @@ def tes_generic():
     run: pytest -v
     The result will restun successful
 ```
+
 4. Inside tox, document the virtual environment and run it.
 ```
 [tox]
@@ -151,7 +159,6 @@ envlist = py37
 skipsdist = True
 
 [testenv]
-
 deps = -rrequirements.txt
 commands = pytest -v
 
@@ -159,6 +166,7 @@ on your cmd run to build your virtual env together with the packages: tox
 
 tox -r : rebuilding your virtual environment
 ```
+
 5. create setup.py to find and install all your packages.
 ```
 from setuptools import setup, find_packages
@@ -203,11 +211,19 @@ setup(
     - prediction.py
 
 4. In the webapp directory, create the following files and folders
-    - create 'static folder'
-    - inside static folder, create 'css folder'
-    - inside static folder, create 'script folder'
-    - In css folder, create main.css file
-    - In script folder,  create index.js
-    - in the webapp directory, create a 'template' folder
-    - inside template folder, create index.html
-    - inside template folder, create base.html
+- create 'static folder'
+- inside static folder, create 'css folder'
+- inside static folder, create 'script folder'
+- In css folder, create main.css file
+- In script folder,  create index.js
+- in the webapp directory, create a 'template' folder
+- inside template folder, create index.html
+- inside template folder, create base.html
+
+
+### App Implementation
+1. Open app.py to start the flask application.
+2. copy the model.joblib file from saved_models to prediction_service model under the model directory.
+3. Define the 'webapp_model_dir' path in params.yaml
+
+![](POSTMAN.png)
